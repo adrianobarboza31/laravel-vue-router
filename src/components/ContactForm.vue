@@ -44,9 +44,9 @@ import {store} from '../store';
         methods:{
             sendForm(){
                 const data={
-                    name:this.name,
-                    email:this.email,
-                    message:this.message
+                    name: this.name,
+                    email: this.email,
+                    message: this.message
                 }
                 axios.post(`${this.store.apiBaseUrl}/contacts`, data).then((response)=>{
                     console.log(response.data)
