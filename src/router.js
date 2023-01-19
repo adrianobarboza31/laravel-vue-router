@@ -4,6 +4,7 @@ import HomePage from './pages/HomePage.vue';
 import ProjectList from './pages/ProjectList.vue';
 import Project from './pages/Project.vue'
 import NotFound from './pages/NotFound.vue'
+import Contact from './pages/Contact.vue'
 
 const router= createRouter({
     history: createWebHistory(),
@@ -19,10 +20,20 @@ const router= createRouter({
             component:ProjectList
         },
         {
-            path:'/projects/:id',
+            path:'/projects/:slug',
             name:'single-project',
             component:Project
-        }
+        },
+        {
+            path:'/contact',
+            name:'contact',
+            component:Contact
+        },
+        {
+            path:'/*',
+            name:'not-found',
+            component:NotFound
+        },
 
     ]
 })
