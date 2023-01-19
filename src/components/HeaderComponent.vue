@@ -8,7 +8,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li  class="nav-item" v-for="item in menuItems" :key="index">
+        <li  class="nav-item" v-for="item in menuItems" >
          <router-link :to="{name: item.routeName} " class="nav-link">
         {{ item.label }}
         </router-link>
@@ -38,7 +38,10 @@ import HomePage from '../pages/HomePage.vue';
                         label:'Projects',
                         routeName:'projects',
                     },
-                   
+                    {
+                        label:'Contact',
+                        routeName:'contact',
+                    },
                 ]
             }
     }
